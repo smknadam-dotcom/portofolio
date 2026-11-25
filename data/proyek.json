@@ -1,0 +1,24 @@
+
+[
+  {
+    "judul": "Halaman Profil Pertama",
+    "kategori": "HTML",
+    "gambar": "img/proyek-profil.png",
+    "alt": "Tangkapan layar halaman profil",
+    "deskripsi": "Halaman web pertama saya, berisi perkenalan, foto, hobi, cita-cita, keahlian, dan kontak. Dibuat dengan HTML dasar."
+  },
+  {
+    "judul": "Form Kontak",
+    "kategori": "HTML",
+    "gambar": "img/proyek-kontak.png",
+    "alt": "Tangkapan layar form kontak",
+    "deskripsi": "Form untuk menghubungi saya. Setiap isian memiliki label dan wajib diisi."
+  },
+  {
+    "judul": "Tabel Jadwal Belajar",
+    "kategori": "HTML",
+    "gambar": "img/proyek-jadwal.png",
+    "alt": "Tangkapan layar tabel jadwal belajar",
+    "deskripsi": "Tabel berisi jadwal belajar mandiri setiap minggu, disusun dengan thead dan tbody."
+  }
+]

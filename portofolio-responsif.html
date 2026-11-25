@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio sederhana dan responsif yang dibuat dengan HTML dan CSS.">
+  <title>Portofolio Saya</title>
+  <link rel="icon" href="img/foto-profil.png">
+
+  <style>
+    :root {
+      --warna-utama: #1e3a8a;
+      --warna-nav: #172554;
+      --warna-judul: #1e3a8a;
+      --warna-latar: #f1f5f9;
+      --warna-teks: #1e293b;
+      --warna-kartu: #ffffff;
+      --warna-bayangan: rgba(0, 0, 0, 0.08);
+    }
+
+    :root[data-tema="gelap"] {
+      --warna-utama: #0f172a;
+      --warna-nav: #020617;
+      --warna-judul: #93c5fd;
+      --warna-latar: #0b1220;
+      --warna-teks: #e2e8f0;
+      --warna-kartu: #1e293b;
+      --warna-bayangan: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--warna-latar);
+      color: var(--warna-teks);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--warna-utama);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--warna-nav);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #93c5fd;
+    }
+
+    #tombol-tema {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      padding: 4px 12px;
+      margin-left: 15px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #tombol-tema:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .profil {
+      background-color: var(--warna-kartu);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px var(--warna-bayangan);
+    }
+
+    .profil img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .profil h2 {
+      color: var(--warna-judul);
+      margin-bottom: 10px;
+    }
+
+    .daftar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .kartu {
+      background-color: var(--warna-kartu);
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 10px var(--warna-bayangan);
+    }
+
+    .kartu h3 {
+      color: var(--warna-judul);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--warna-utama);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Tampilan ponsel */
+    @media (max-width: 600px) {
+      header {
+        padding: 15px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      #tombol-tema {
+        display: block;
+        margin: 8px auto 0;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .daftar {
+        flex-direction: column;
+      }
+
+      .kartu {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Portofolio Saya</h1>
+    <p>Website sederhana dan responsif</p>
+  </header>
+
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#proyek">Proyek</a>
+    <button type="button" id="tombol-tema">Mode Gelap</button>
+  </nav>
+
+  <main class="container">
+
+    <section class="profil" id="profil">
+      <img src="img/foto-profil.png" alt="Foto profil" width="150" height="150">
+      <h2>Halo, Saya Andi</h2>
+      <p>
+        Saya seorang pelajar yang sedang belajar membuat website
+        menggunakan HTML dan CSS.
+      </p>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian Saya</h2>
+
+      <div class="daftar">
+        <article class="kartu">
+          <h3>HTML</h3>
+          <p>Mempelajari struktur dan elemen dasar halaman website.</p>
+        </article>
+
+        <article class="kartu">
+          <h3>CSS</h3>
+          <p>Mempelajari warna, layout, desain, dan responsivitas.</p>
+        </article>
+
+        <article class="kartu">
+          <h3>JavaScript</h3>
+          <p>Mempelajari interaksi dan fungsi pada halaman website.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proyek" style="margin-top: 25px;">
+      <h2>Proyek Saya</h2>
+
+      <div class="daftar">
+        <article class="kartu">
+          <h3>Website Profil</h3>
+          <p>Website perkenalan sederhana menggunakan HTML.</p>
+        </article>
+
+        <article class="kartu">
+          <h3>Website Responsif</h3>
+          <p>Website yang dapat menyesuaikan ukuran layar ponsel dan laptop.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portofolio Saya</p>
+  </footer>
+
+  <script>
+    // Mode gelap dan terang
+    const tombolTema = document.getElementById("tombol-tema");
+    const root = document.documentElement;
+
+    function terapkanTema(tema) {
+      if (tema === "gelap") {
+        root.setAttribute("data-tema", "gelap");
+        tombolTema.textContent = "Mode Terang";
+      } else {
+        root.removeAttribute("data-tema");
+        tombolTema.textContent = "Mode Gelap";
+      }
+    }
+
+    let temaTersimpan = "terang";
+    try {
+      temaTersimpan = localStorage.getItem("tema") || "terang";
+    } catch (e) {}
+    terapkanTema(temaTersimpan);
+
+    tombolTema.addEventListener("click", function () {
+      const temaBaru = root.getAttribute("data-tema") === "gelap" ? "terang" : "gelap";
+      terapkanTema(temaBaru);
+      try {
+        localStorage.setItem("tema", temaBaru);
+      } catch (e) {}
+    });
+  </script>
+
+</body>
+</html>
